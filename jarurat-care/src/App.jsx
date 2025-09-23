@@ -10,7 +10,6 @@ import Home from './Components/Home';
 function App() {
   let [allPatients, setAllPatients] = useState();
   let [isFetched, setIsFetched] = useState(false);
-  console.log(allPatients)
 
   return (
     <>

@@ -14,8 +14,8 @@ export default function Navbar() {
         <div className="navbar-wrapper">
             <div className="navbar-container">
                 <div className="header">
-                    <img src="/logo.png" alt="logo" />
-                    <h2>Jarurat Care</h2>
+                    <img src="https://jc.vercel.app/_app/immutable/assets/logo_head.DsE7lxJZ.webp" style={{width: "75px"}} alt="logo" />
+                    <h2 style={{marginLeft: "10px"}}>Jarurat Care</h2>
                 </div>
 
                 {/* Desktop Nav */}
