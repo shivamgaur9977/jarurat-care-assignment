@@ -23,7 +23,7 @@ export default function Patients({ allPatients, setAllPatients, setIsFetched, is
         let getAllUsers = async () => {
             setLoading(true);
             try {
-                let res = await axios.get("http://localhost:8080/patients");
+                let res = await axios.get("https://jarurat-care-assignment-hjwt.onrender.com/patients");
                 setAllPatients(res.data);
                 setIsFetched(true);
                 setLoading(false);
