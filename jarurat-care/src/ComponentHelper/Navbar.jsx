@@ -7,6 +7,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     let handleNavigation = (e) => {
+        console.log(e.target.name);
         navigate(`/${e.target.name}`);
     };
 
@@ -20,7 +21,7 @@ export default function Navbar() {
 
                 {/* Desktop Nav */}
                 <div className="nav-btns desktop-nav">
-                    <a name="/">Home</a>
+                    <a name="" onClick={handleNavigation}>Home</a>
                     <a name="patients" onClick={handleNavigation}>
                         Patients
                     </a>
