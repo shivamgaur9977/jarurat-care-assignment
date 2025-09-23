@@ -10,8 +10,6 @@ app.use(cors());
 
 const URL = process.env.MONGODB_URL;
 
-console.log(URL);
-
 main()
     .then(() => console.log("Database is connected"))
     .catch(err => console.log(err));
