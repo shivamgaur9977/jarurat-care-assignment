@@ -19,9 +19,14 @@ async function main() {
 }
 
 
-app.get("/patients", async (req, res) => {
-    let patients = await Patient.find();
-    res.json(patients);
+app.get('/patients', async (req, res) => {
+    try {
+        const patients = await Patient.find();
+        res.json(patients);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
 });
 
 app.listen(8080, () => {
