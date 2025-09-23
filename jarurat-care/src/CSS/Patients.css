@@ -1,0 +1,40 @@
+.patient-container{
+    overflow-x: hidden;
+}
+
+.layout{
+    margin: 10px 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        margin: 10px;
+        cursor: pointer;
+    }
+}
+
+.layout-icons {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+
+    i:hover {
+        color: rgb(57, 57, 248);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .layout {
+        margin: 10px 20px;
+    }
+    .cards {
+        justify-content: center !important;
+    }
+}
+
+.search-bar {
+    /* margin: 10px 20px; */
+    border: 2px solid rgb(180, 180, 180);
+    justify-self: center;
+
+}

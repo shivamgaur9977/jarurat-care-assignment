@@ -1,0 +1,28 @@
+import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Patients from './Components/Patients';
+import AddPatient from './Components/AddNewPatient';
+import Home from './Components/Home';
+
+function App() {
+  let [allPatients, setAllPatients] = useState();
+  let [isFetched, setIsFetched] = useState(false);
+  console.log(allPatients)
+
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Home />} path='/' />
+          <Route element={<Patients allPatients={allPatients} setAllPatients={setAllPatients} isFetched={isFetched} setIsFetched={setIsFetched}/>} path="/patients" />
+          <Route element={<AddPatient setAllPatients={setAllPatients}/>} path='/addPatient' />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App

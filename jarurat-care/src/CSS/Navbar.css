@@ -1,0 +1,93 @@
+.navbar-wrapper {
+  border-bottom: 1px solid black;
+}
+
+.navbar-container {
+  margin: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btns a {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none !important;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Animate hamburger → X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    max-height: 300px; /* enough for all links */
+    padding: 10px;
+  }
+
+  .mobile-menu a {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .mobile-menu a:hover {
+    background: #eee;
+  }
+}
