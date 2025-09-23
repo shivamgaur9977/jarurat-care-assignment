@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="navbar-wrapper">
             <div className="navbar-container">
                 <div className="header">
-                    <img src="./public/logo.png" alt="logo" />
+                    <img src="./logo.png" alt="logo" />
                     <h2>Jarurat Care</h2>
                 </div>
 
