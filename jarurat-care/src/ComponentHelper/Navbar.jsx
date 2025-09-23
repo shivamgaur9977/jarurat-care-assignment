@@ -20,7 +20,7 @@ export default function Navbar() {
 
                 {/* Desktop Nav */}
                 <div className="nav-btns desktop-nav">
-                    <a name="home">Home</a>
+                    <a name="/">Home</a>
                     <a name="patients" onClick={handleNavigation}>
                         Patients
                     </a>
