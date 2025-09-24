@@ -6,6 +6,7 @@ import './App.css'
 import Patients from './Components/Patients';
 import AddPatient from './Components/AddNewPatient';
 import Home from './Components/Home';
+import NotFound from './Components/PageNotFound';
 
 function App() {
   let [allPatients, setAllPatients] = useState();
@@ -16,8 +17,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Home />} path='/' />
-          <Route element={<Patients allPatients={allPatients} setAllPatients={setAllPatients} isFetched={isFetched} setIsFetched={setIsFetched}/>} path="/patients" />
-          <Route element={<AddPatient setAllPatients={setAllPatients}/>} path='/addPatient' />
+          <Route element={<Patients allPatients={allPatients} setAllPatients={setAllPatients} isFetched={isFetched} setIsFetched={setIsFetched} />} path="/patients" />
+          <Route element={<AddPatient setAllPatients={setAllPatients} />} path='/addPatient' />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
